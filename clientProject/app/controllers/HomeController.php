@@ -3,9 +3,9 @@
 class HomeController extends BaseController {
 
 	public function index() {
-        use DebugBar\StandardDebugBar;
+#        use DebugBar\StandardDebugBar;
 
-        $debugbar = new StandardDebugBar();
+        $debugbar = new DebugBar\StandardDebugBar();
         $debugbarRenderer = $debugbar->getJavascriptRenderer();
 
         $debugbar["messages"]->addMessage("hello world!");

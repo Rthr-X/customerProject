@@ -1,7 +1,7 @@
 {% extends 'mainTemplate' %}
 
 {% block header %}
-    {{ debugBarHeader }}
+    {{ debugBarHeader|raw }}
 {% endblock %}
 
 {% block content %}
@@ -9,5 +9,5 @@
 {% endblock %}
 
 {% block scripts %}
-    {{  debugBarScripts }}
+    {{  debugBarScripts|raw }}
 {% endblock %}
