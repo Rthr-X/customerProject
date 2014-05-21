@@ -21,8 +21,8 @@ class CreateUsersTable extends Migration {
 			$table->string('pass');
 			$table->string('phone', 25)->nullable();
 			$table->string('title', 100)->nullable();
-			$table->int('prefix_id')->nullable();
-			$table->int('suffix_id')->nullable();
+			$table->integer('prefix_id')->nullable();
+			$table->integer('suffix_id')->nullable();
 			$table->timestamps();
 		});
 	}
