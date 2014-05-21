@@ -1,19 +1,10 @@
 {% extends 'mainTemplate' %}
 
-{% block header %}
-    {{ parent() }}
-{% endblock %}
+{% block jumbotron %}{% endblock %}
 
 {% block content %}
-    Error 404!  {{ something }} is unknown!
+    <h2>Error 404!</h2>
+    <p>&quot;{{ url }}&quot; is an unknown location!</p>
 {% endblock %}
 
-{% block footer %}
-    {{  parent() }}
-    <br />
-    And Other Content
-{% endblock %}
 
-{% block scripts %}
-    {{ parent() }}
-{% endblock %}
