@@ -1,15 +1,28 @@
 <!doctype html>
 <html>
-<head>
-    <meta charset="UTF-8" />
-    <script language="javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    {% block header %}{% endblock %}
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="assets/css/core.css" />
+        {% block header %}{% endblock %}
+    </head>
+    <body>
+        <div id="outerWrappr">
+            <div id="innerWrapper">
+                <div id="header">
 
-    {% block content %}{% endblock %}
+                </div>
+                <div id="body">
 
-    {% block scripts %}{% endblock %}
+                    {% block content %}{% endblock %}
 
-</body>
+                </div>
+                <div id="footer">
+                    {% block footer %}
+                        &copy; 2014 Me and Stuff
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+        {% block scripts %}{% endblock %}
+    </body>
 </html>

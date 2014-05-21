@@ -2,11 +2,10 @@
 
 {% block header %}
     {{ parent() }}
-    {{ debugBarHeader|raw }}
 {% endblock %}
 
 {% block content %}
-    This is new content using TWIG and PHPDebugBar, yay!
+    Error 404!  {{ something }} is unknown!
 {% endblock %}
 
 {% block footer %}
@@ -17,5 +16,4 @@
 
 {% block scripts %}
     {{ parent() }}
-    {{ debugBarScripts|raw }}
 {% endblock %}

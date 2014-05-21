@@ -11,10 +11,13 @@
 |
 */
 
-Route::get('/', function() {
-	return View::make('homePage');
-});
+#Route::get('/', function() {
+#	return View::make('homePage');
+#});
 
-Route::get('/home', ['as'=>'home', 'uses'=>'homeController@index']);
+Route::get('/', ['as'=>'home', 'uses'=>'homeController@index']);
 
+
+
+Route::get('/{something}', ['as'=>'404', 'uses'=>'errorController@error404']);
 
