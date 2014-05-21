@@ -7,7 +7,8 @@
 		"laravel/framework": "4.1.*",
         "maximebf/debugbar": "1.*",
         "way/generators": "2.*",
-        "rcrowe/twigbridge": "0.5.*"
+        "rcrowe/twigbridge": "0.5.*",
+		"barryvdh/laravel-debugbar": "dev-master"
 	},
 	"autoload": {
 		"classmap": [
@@ -25,6 +26,7 @@
 			"php artisan optimize"
 		],
 		"post-update-cmd": [
+			"php artisan debugbar:publish",
 			"php artisan clear-compiled",
 			"php artisan optimize"
 		],

@@ -120,8 +120,9 @@ return array(
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 
+		'Barryvdh\Debugbar\ServiceProvider',
         'Way\Generators\GeneratorsServiceProvider',
-        'TwigBridge\TwigServiceProvider',
+        'TwigBridge\TwigServiceProvider'
 
 	),
 
