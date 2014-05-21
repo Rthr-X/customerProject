@@ -15,9 +15,8 @@
 #	return View::make('homePage');
 #});
 
-Route::get('/', ['as'=>'home', 'uses'=>'homeController@index']);
+Route::get('/{route?}', ['as'=>'home', 'uses'=>'homeController@index']);
 
 
-
-Route::get('/{something}', ['as'=>'404', 'uses'=>'errorController@error404']);
-
+// Final catch-all routine, throw to a 404 page
+Route::any('{all}', function($page) { return View::make('error404'); })->where('all', '.*');
