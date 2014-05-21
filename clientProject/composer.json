@@ -4,7 +4,10 @@
 	"keywords": ["framework", "laravel"],
 	"license": "MIT",
 	"require": {
-		"laravel/framework": "4.1.*"
+		"laravel/framework": "4.1.*",
+        "maximebf/debugbar": "1.*",
+        "way/generators": "2.*",
+        "rcrowe/twigbridge": "0.5.*"
 	},
 	"autoload": {
 		"classmap": [
