@@ -8,7 +8,7 @@
 			if (Auth::attempt(array('email' => $email, 'password' => $password), true)){
 				return Redirect::to('user/login');
 			} else {
-				return Redirect::to('home');
+				return Redirect::to('user/register');
 			}
 		}
 
