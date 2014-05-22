@@ -13,7 +13,6 @@
 		}
 
 		public function missingMethod($params = []) {
-
 			Debugbar::addMessage("HomeController::index - Opening route '{$params[0]}'");
 			return View::make('home');
 
