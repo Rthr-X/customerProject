@@ -8,7 +8,8 @@
         "maximebf/debugbar": "1.*",
         "way/generators": "2.*",
         "rcrowe/twigbridge": "0.5.*",
-		"barryvdh/laravel-debugbar": "dev-master"
+		"barryvdh/laravel-debugbar": "dev-master",
+        "barryvdh/laravel-ide-helper": "1.*"
 	},
 	"autoload": {
 		"classmap": [
@@ -28,6 +29,7 @@
 		"post-update-cmd": [
 			"php artisan debugbar:publish",
 			"php artisan clear-compiled",
+            "php artisan ide-helper:generate",
 			"php artisan optimize"
 		],
 		"post-create-project-cmd": [

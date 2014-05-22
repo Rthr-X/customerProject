@@ -4,22 +4,30 @@ class HomeController extends BaseController {
 
     public function missingMethod($params = []) {
 
-        Debugbar::addMessage("HomeController::index - Opening route '{$params[0]}'");
+        $message = "HomeController::index - Looking for route '{$params[0]}'";
 
         switch($params[0]) {
             case "about":
-                return View::make('about');
+
+                $view = View::make('about');
                 break;
+            case "":
             case "/":
             case "home":
-                return View::make('home');
+                $message .= " ('home')";
+                $view = View::make('home');
                 break;
             default:
-                return View::make('error404', ['url'=>$params[0]]);
+                $warning = "HomeController::index - 404 Error: '".join("/", $params)."' unknown";
+                $view = View::make('error404', ['url'=>$params[0]]);
                 break;
         }
 
-#        dd($params);
+        Debugbar::addMessage( $message );
+        if(isset($warning)) Debugbar::warning( $warning );
+
+        return $view;
+
     }
 
 }
