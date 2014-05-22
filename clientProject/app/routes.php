@@ -4,4 +4,6 @@
 
 //Route::any('{all}', ['uses'=>'HomeController@index'])->where('all', '.*');
 
-Route::controller('/', 'HomeController');
+	Route::controller('/', 'HomeController');
+	Route::get('signin', 'userController@signin');
+	Route::get('user/{id?}', 'userController@home');
