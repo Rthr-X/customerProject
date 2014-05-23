@@ -12,14 +12,16 @@
 			if (Auth::attempt(array('email' => $email, 'password' => $password), true)){
 				return Redirect::to('loggedin');
 			} else {
-				return Redirect::to('register/'.$email);
+				return Redirect::to('register/')->with('email',$email);
 			}
 		}
-		public function registration($email = ''){
-			View::make('user.register',array('email'=>$email));
+		public function registration(){
+			$email = Session::get('email');
+			return View::make('user.register',array('email'=>$email));
 		}
-		public function loggedin($email = ''){
-			View::make('user.loggedin',array('email'=>$email));
+		public function loggedin(){
+			$email = Session::get('email');
+			return View::make('user.loggedin',array('email'=>$email));
 		}
 		public function missingMethod($params = []) {
 

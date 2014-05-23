@@ -15,7 +15,7 @@ class HomeController extends BaseController {
             case "/":
             case "home":
                 $message .= " ('home')";
-                $view = View::make('home');
+                $view = View::make('home',['jumbo'=>true]);
                 break;
             default:
                 $warning = "HomeController::index - 404 Error: '".join("/", $params)."' unknown";
